@@ -10,7 +10,8 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // Get a single thought
+
+  // Get a single thought by _id
   async getSingleThought(req, res) {
     try {
       const thought = await Thought.findById(req.params.id);
@@ -31,6 +32,26 @@ module.exports = {
       await User.findByIdAndUpdate(req.body.userId, {
         $push: { thoughts: thought._id },
       });
+      res.json(thought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+  // Update a thought
+  async updateThought(req, res) {
+    try {
+      const thought = await Thought.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+      });
+      res.json(thought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+  // Delete a thought
+  async deleteThought(req, res) {
+    try {
+      const thought = await Thought.findByIdAndDelete(req.params.id);
       res.json(thought);
     } catch (err) {
       res.status(500).json(err);

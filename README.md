@@ -64,9 +64,9 @@ To use this API:
   - `POST /api/thoughts/:thoughtId/reactions`: Add a reaction to a thought.
   - `DELETE /api/thoughts/:thoughtId/reactions/:reactionId`: Remove a reaction from a thought.
 
-## Example(s)
+## Demo Video + Example(s)
 
-[Demo Video]()
+[Demo Video](https://drive.google.com/file/d/1_9tFAerVSXp6hLwoY5nK0ROTo9eLHRiS/view)
 
 ![Example](./images//usersExample.png)
 

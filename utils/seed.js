@@ -1,7 +1,6 @@
 const connection = require("../config/connection");
 const { User, Thought } = require("../models");
 const { userData, thoughtData } = require("./data");
-const { Type } = require("mongoose");
 
 async function seedDatabase() {
   connection.once("open", async () => {

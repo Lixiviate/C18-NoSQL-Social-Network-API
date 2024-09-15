@@ -74,7 +74,7 @@ To use this API:
 
 ![Example](./images/addFriendExample.png)
 
-![Example](./images/Example2.png)
+![Example](./images/addReactionExample.png)
 
 ## Source Code
 
